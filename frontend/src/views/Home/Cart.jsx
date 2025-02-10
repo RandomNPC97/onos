@@ -18,8 +18,13 @@ function Cart() {
   // Load cart from localStorage on component mount
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    setCartItems(savedCart);
+    const updatedCart = savedCart.map(item => ({
+      ...item,
+      quantity: item.quantity || 1 // Ensure quantity is at least 1
+    }));
+    setCartItems(updatedCart);
   }, []);
+
 
   // Save cart to localStorage when it changes
   useEffect(() => {
