@@ -15,44 +15,58 @@ import { useLocation } from 'react-router-dom';
 const limitedDeals = [
   { 
     id: 1, 
-    name: 'Plaid Trousers', 
-    description: 'Trendy plaid trousers perfect for fall.', 
-    price: '59.99', 
-    imageUrls: ['/assets/plaid-trousers1.jpg', '/assets/plaid-trousers2.jpg', '/assets/plaid-trousers3.jpg'],
+    name: 'WR.UP® Faux Leather Jumpsuit', 
+    description: 'High Waisted Flare.', 
+    price: '249.00', 
+    imageUrls: ['https://freddystore.com/cdn/shop/files/WR.UP_Faux_Leather_Jumpsuit_-_High_Waisted_-_Flare_-_Black_-_Freddy_USA-4857841.jpg?crop=center&height=450&v=1729529878&width=300', 'https://freddystore.com/cdn/shop/files/WR.UP_Faux_Leather_Jumpsuit_-_High_Waisted_-_Flare_-_Black_-_Freddy_USA-4857866.jpg?crop=center&height=1600&v=1735350376&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Faux_Leather_Jumpsuit_-_High_Waisted_-_Flare_-_Black_-_Freddy_USA-4857848.jpg?crop=center&height=1600&v=1735350376&width=1056'],
     reviews: [
-      { reviewer: 'Liam', rating: 5, comment: 'Perfect for the fall season.' },
-      { reviewer: 'Olivia', rating: 4, comment: 'Stylish but a bit tight around the waist.' },
-      { reviewer: 'Noah', rating: 5, comment: 'Amazing quality and fit!' },
-      { reviewer: 'Sophia', rating: 5, comment: 'Love the plaid pattern.' },
-      { reviewer: 'Mason', rating: 4, comment: 'Looks great, but shrinks slightly after washing.' }
+      { reviewer: 'Alice', rating: 5, comment: 'Perfect fit! Love the quality.' },
+      { reviewer: 'Jane', rating: 4, comment: 'Very comfortable but runs slightly small.' },
+      { reviewer: 'Emma', rating: 5, comment: 'My new favorite pair of jeans!' },
+      { reviewer: 'Olivia', rating: 4, comment: 'Good material, but delivery took a while.' },
+      { reviewer: 'Sophia', rating: 5, comment: 'Worth every penny. Highly recommend!' }
     ]
   },
   { 
     id: 2, 
-    name: 'Linen Pants', 
-    description: 'Breathable linen pants for warmer weather.', 
-    price: '49.99', 
-    imageUrls: ['/assets/linen-pants1.jpg', '/assets/linen-pants2.jpg', '/assets/linen-pants3.jpg'],
+    name: 'WR.UP® Corset Faux Leather', 
+    description: 'High Waisted Full Length.', 
+    price: '219.00', 
+    imageUrls: ['https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Latte_-_Freddy_USA-4857369.jpg?crop=center&height=1600&v=1729529161&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Latte_-_Freddy_USA-4857371.jpg?crop=center&height=1600&v=1729529166&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Latte_-_Freddy_USA-4857375.jpg?crop=center&height=1600&v=1729529171&width=1056'],
     reviews: [
-      { reviewer: 'Amelia', rating: 5, comment: 'Perfect for hot days. So breathable!' },
-      { reviewer: 'Lucas', rating: 4, comment: 'Love them, but they wrinkle easily.' },
-      { reviewer: 'Ella', rating: 5, comment: 'Very comfortable and stylish.' },
-      { reviewer: 'Henry', rating: 5, comment: 'Great fit and material.' },
-      { reviewer: 'Ava', rating: 4, comment: 'Perfect casual wear for summer.' }
+      { reviewer: 'Liam', rating: 4, comment: 'Nice and breezy for summer days.' },
+      { reviewer: 'Charlotte', rating: 5, comment: 'Love the fit and flow of these pants.' },
+      { reviewer: 'Amelia', rating: 4, comment: 'Stylish, but wrinkles easily.' },
+      { reviewer: 'Mia', rating: 5, comment: 'Beautiful pants, very comfortable.' },
+      { reviewer: 'Isabella', rating: 5, comment: 'Exactly as pictured. Great buy!' }
     ]
   },
   { 
     id: 3, 
-    name: 'Paperbag Waist Pants', 
-    description: 'Stylish paperbag waist pants with a tie belt.', 
-    price: '44.99', 
-    imageUrls: ['/assets/paperbag-pants1.jpg', '/assets/paperbag-pants2.jpg', '/assets/paperbag-pants3.jpg'],
+    name: 'WR.UP® Fleece Lined Fashion', 
+    description: 'High Waisted Full Length.', 
+    price: '159.00', 
+    imageUrls: ['https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857333.jpg?crop=center&height=1600&v=1729529103&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857336.jpg?crop=center&height=1600&v=1729529109&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Corset_Faux_Leather_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857343.jpg?crop=center&height=1600&v=1729529121&width=1056'],
     reviews: [
-      { reviewer: 'Evelyn', rating: 5, comment: 'Absolutely love the fit and style!' },
-      { reviewer: 'William', rating: 4, comment: 'Great design, but slightly loose at the waist.' },
-      { reviewer: 'Isabella', rating: 5, comment: 'Perfect pants for casual days.' },
-      { reviewer: 'Jack', rating: 5, comment: 'The belt adds a nice touch. Love it!' },
-      { reviewer: 'Mia', rating: 5, comment: 'Comfortable and stylish at the same time.' }
+      { reviewer: 'Benjamin', rating: 5, comment: 'The pockets are so handy!' },
+      { reviewer: 'Lucas', rating: 4, comment: 'Good quality, but a little baggy.' },
+      { reviewer: 'Ella', rating: 5, comment: 'Perfect for casual outings.' },
+      { reviewer: 'Harper', rating: 5, comment: 'Exactly what I was looking for.' },
+      { reviewer: 'Mason', rating: 4, comment: 'Runs slightly large but still great.' }
+    ]
+  },
+  { 
+    id: 4, 
+    name: 'Straight-Leg Trousers', 
+    description: 'Classic straight-leg trousers for everyday comfort.', 
+    price: '39.99', 
+    imageUrls: ['https://freddystore.com/cdn/shop/files/WR.UP_Fleece_Lined_Fashion_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857885.jpg?crop=center&height=1600&v=1729529943&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Fleece_Lined_Fashion_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857889.jpg?crop=center&height=1600&v=1729529949&width=1056', 'https://freddystore.com/cdn/shop/files/WR.UP_Fleece_Lined_Fashion_-_High_Waisted_-_Full_Length_-_Black_-_Freddy_USA-4857893.jpg?crop=center&height=1600&v=1729529954&width=1056'],
+    reviews: [
+      { reviewer: 'Henry', rating: 5, comment: 'Perfect for work and casual wear.' },
+      { reviewer: 'Chloe', rating: 5, comment: 'Great material and fit!' },
+      { reviewer: 'Ava', rating: 4, comment: 'Comfortable but needs ironing.' },
+      { reviewer: 'Evelyn', rating: 5, comment: 'Love these trousers, very versatile.' },
+      { reviewer: 'Elijah', rating: 4, comment: 'Good value for the price.' }
     ]
   }
 ];
